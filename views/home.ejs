@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <h1>The Weather</h1>
+        <p>Selecione a cidade</p>
+        <form  action="/" method="post">
+            <input class="bar" name="country" type="text" >
+            <button class="btn" type="submit">Go</button>
+        </form>
+
+        <div class="description">
+            <h3> <%= city %> </h3>
+            <h3><span><%= temp %> C° </span></h3>
+            <!-- <h4><%= localTime %></h4> -->
+            <div class="condition">
+                <p><%= condition %></p>
+                <img src="<%= conditionImg %>" alt="Icon">
+                <p>Humidade é de <%= humidity %></p>
+                <p>Velocidade do vento é de <%= windSpeed %> kmh</p>
+                <p>Sensação témica é <%= feelsLike %> C°</p>
+                <a href="https://www.weatherapi.com/" title="Free Weather API"><img src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com" border="0"></a>
+            </div>  
+        </div>
+        
+    </div>
+</body>
+</html>
+
