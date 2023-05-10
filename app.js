@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const https = require("node:https");
+const https = require("https");
 
 const PORT = process.env.PORT || 3030;
 
