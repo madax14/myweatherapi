@@ -2,8 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-// const https = require("node:https");
-import https from 'https';
+const https = require("node:https");
 
 const PORT = process.env.PORT || 3030;
 
