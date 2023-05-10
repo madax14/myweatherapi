@@ -2,7 +2,13 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const https = require("node:https");
+// const https = require("node:https");
+let https;
+try {
+  https = await import('node:https');
+} catch (err) {
+  console.error('https support is disabled!');
+}
 
 const PORT = process.env.PORT || 3030;
 
