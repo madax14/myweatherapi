@@ -19,8 +19,6 @@ var country = "Porto Velho";
 app.get("/", function (req, res) {
     const apiKey = process.env.SECRET_KEY;
     const url = "https://api.weatherapi.com/v1/current.json?key="+apiKey+"&q="+country+"&aqi=no&lang=pt";
-    
-    const https = require('node:https');
 
     https.get(url, (response) => {
 
